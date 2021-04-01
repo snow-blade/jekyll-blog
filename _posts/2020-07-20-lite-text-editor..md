@@ -7,7 +7,7 @@ tags: [C_lang,lua]
 math: true
 mermaid: true
 image:
-  src: https://raw.githubusercontent.com/snow-blade/blog/master/content/assets/install.png
+  src: https://raw.githubusercontent.com/snow-blade/blog/master/content/assets/lite.png
 ---
 
 ### What the heck is it  🕶
