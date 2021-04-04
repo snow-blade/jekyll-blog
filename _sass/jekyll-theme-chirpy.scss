@@ -23,14 +23,21 @@
   "layout/category-tag";
 
 .tip {
-  border-left: 4px solid rgb(144, 205, 244);
-  border-left-color: rgb(144, 205, 244);
+    border-left: 10px solid rgb(53, 7, 206);
+    border-left-color: rgb(241, 70, 2);
     color: black;
     line-height: 1.6;
     border-radius: 4px;
     padding: 0.4rem 0.8rem;
-    background-color: #4f7c95;
-    border: 1px solid #ffeb81;
-    -webkit-box-shadow: -12px 14px 25px 18px #000000; 
-    box-shadow: -12px 14px 25px 18px #000000;
+    background-color: #59f8d6;
+    -webkit-box-shadow: -12px 14px 25px 18px #301e35; 
+    box-shadow: -12px 14px 25px 18px #301e35;
+  }
+  .tip-header {
+    align-items: center;
+    background-color: rgb(131, 255, 245);
+    border-left-color: rgb(255, 166, 0);
+    border-left: 10px solid;
+    -webkit-box-shadow: -12px 14px 25px 18px #301e35; 
+    box-shadow: -12px 14px 25px 18px #301e35;
   }
