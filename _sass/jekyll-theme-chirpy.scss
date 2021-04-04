@@ -29,15 +29,16 @@
     line-height: 1.6;
     border-radius: 4px;
     padding: 0.4rem 0.8rem;
-    background-color: #59f8d6;
+mo    background-color: #a2a360;
     -webkit-box-shadow: -12px 14px 25px 18px #301e35; 
     box-shadow: -12px 14px 25px 18px #301e35;
   }
   .tip-header {
     align-items: center;
-    background-color: rgb(131, 255, 245);
-    border-left-color: rgb(255, 166, 0);
-    border-left: 10px solid;
+    background-color: #a2a360;
+    border-color: coral;
+    border: 2px solid #9c1e1e;
+    border-style: dotted;
     -webkit-box-shadow: -12px 14px 25px 18px #301e35; 
     box-shadow: -12px 14px 25px 18px #301e35;
   }
