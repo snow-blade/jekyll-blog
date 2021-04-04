@@ -88,13 +88,13 @@ here is the output i get in my terminal:
 ![](https://raw.githubusercontent.com/snow-blade/blog/master/content/assets/print-icons.png)
 
 <p class='tip' >
-   📓 📝 😎  tip:
+   <div class="tip-header">📓 📝 😎 tip</div>
     <br>
     Do not worry if all the icons are not being displayed correctly, just restart the shell
 </p>
 
 <p class='tip'>
-   📓 📝 😎  tip:
+   <div class="tip-header">📓 📝 😎 tip</div>
     <br>
     refer to the troubleshoot section below if the problem persists after restarting the shell
 </p>
@@ -128,7 +128,7 @@ If you do not get this output then it should be a problem with your terminal emu
 If you want you can make `/opt/coreutils/bin/ls` as execute itself each time you type `ls`, just execute `$ sudo cp /opt/coreutils/bin/ls /usr/bin/ls` . also be sure to make a copy of the original ls binary in case you want to return to the good ol' `ls` .
 
 <p class='tip'>
-📓 📝 😎  tip:
+<div class="tip-header">📓 📝 😎 tip</div>
 <br/>
 if you found any error or typo in this tutorial please open an issue or make a PR 
 </p>

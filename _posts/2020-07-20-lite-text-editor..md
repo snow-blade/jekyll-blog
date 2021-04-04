@@ -65,14 +65,14 @@ After installing the required packages on both platforms, build lite with:
   cd lite&&./build.sh
   ```
 
-   <p class='tip'>  📓 📝 😎  tip: <br />  <br />Read the below link if you're on linux, for a better user experience</p> 
+   <p class='tip'>  <div class="tip-header">📓 📝 😎 tip</div> <br />  <br />Read the below link if you're on linux, for a better user experience</p> 
  <a href="https://github.com/rxi/lite/issues/134"> ➜➜ here ⬅⬅ </a>
 
 ### When would I need it 📑📑
 
 Lite is not complete enough to be called an IDE but you can use it as an alternative to notepad/notepad++ and use it to open simple files like .txt or .c, .h or programs you want to quickly compile in a terminal.
 
-<p class='tip'> 📓 📝 😎  tip: <br />  <br /> Lite has a console plugin to quickly compile or test your programs </p>
+<p class='tip'> <div class="tip-header">📓 📝 😎 tip</div> <br />  <br /> Lite has a console plugin to quickly compile or test your programs </p>
 Download it here: <a href="https://github.com/a327ex/lite-plugins/blob/master/plugins/console.lua">https://github.com/a327ex/lite-plugins/blob/master/plugins/console.lua</a> and put it in the plugins folder.<br/>
 As lite is extremely lightweight, it only requires =~2mb of storage and takes an insignificant amount of cpu, it's perfect for simple and fast file editing, it's also highly customizable, so you can use it to brush up those Lua and c skills
 
@@ -80,7 +80,7 @@ As lite is extremely lightweight, it only requires =~2mb of storage and takes an
 
 I decided since long to use lite as my default text editor and use an IDE only when I need it as most of the programs I write, I eventually need to compile them using a terminal
 
-<p class='tip'>  📓 📝 😎  tip: <br />  <br />Please follow me on github<p>
+<p class='tip'>  <div class="tip-header">📓 📝 😎 tip</div> <br />  <br />Please follow me on github<p>
 That's it folks ☑️☑️, try it out and trust me you'll like this editor for it's simplicity and be amazed by it's functionalities that only fit  in 2mb of storage.
 
 
