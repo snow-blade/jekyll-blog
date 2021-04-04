@@ -20,7 +20,7 @@ Original Description:
 >
 > ---
 
-<p className="tip">Hmmm...Given only this explanation, you might get confused a bit so let's try breaking it in simple English.</p>
+<p class="tip">Hmmm...Given only this explanation, you might get confused a bit so let's try breaking it in simple English.</p>
 
 It pretty much means that:
 
@@ -46,7 +46,7 @@ It pretty much means that:
 
   ```
 
-   <p className="tip"> Be sure to have ~/.cargo/bin in you path on linux, it should normally be fine on windows </p>
+   <p class="tip"> Be sure to have ~/.cargo/bin in you path on linux, it should normally be fine on windows </p>
   Then let's create a new directory which will contain our wiki posts
 
   ```bash
@@ -141,6 +141,6 @@ Also, the deadwiki philosophy is as follow:
 
   I hope you found this article useful, so see you in the next episode of `random crates`
 
-  <p className="tip">If you found any typo or improvements please make a little PR to fix this on the Github repo</p>
+  <p class="tip">If you found any typo or improvements please make a little PR to fix this on the Github repo</p>
 
   Github repo of this post: https://github.com/snow-blade/blog/blob/master/content/posts/
