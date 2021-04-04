@@ -23,10 +23,14 @@
   "layout/category-tag";
 
 .tip {
+  border-left: 4px solid rgb(144, 205, 244);
+  border-left-color: rgb(144, 205, 244);
     color: black;
     line-height: 1.6;
     border-radius: 4px;
     padding: 0.4rem 0.8rem;
     background-color: #4f7c95;
     border: 1px solid #ffeb81;
+    -webkit-box-shadow: -12px 14px 25px 18px #000000; 
+    box-shadow: -12px 14px 25px 18px #000000;
   }
