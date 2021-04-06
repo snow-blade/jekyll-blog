@@ -1,7 +1,7 @@
 ---
 title: "August Recap: Goodbye holidays's 🚀 💻 🖱"
 author: Freeman Irabaruta
-date: 2020-07-13 11:33:00 +0800
+date: 2020-09-04 11:33:00 +0800
 categories: [Blogging,Coding]
 tags: [Rust,JS,Wrap-Up]
 math: true
