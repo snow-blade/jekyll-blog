@@ -1,9 +1,9 @@
 ---
-title: "Porting C++ code to python using the pybind11 library"
+title: "C++ Goodies ep1: Porting C++ code to python using the pybind11 library"
 author: Freeman Irabaruta
 date: 2021-04-04 19:55:00 +0800
-categories: [Blogging,Coding]
-tags: [Python,C_lang, C++]
+categories: [Blogging,Coding,Cpp-Goodies]
+tags: [Python,C_lang, C++,libraries]
 math: true
 mermaid: true
 image:
@@ -16,7 +16,7 @@ Using C and python, it is extremely easy to do so as python even has a built-in 
 
 In the past, an excellent library named [Boost.python](http://www.boost.org/doc/libs/1_58_0/libs/python/doc) has been made, but the problem resided in the fact that  Boost is an enormously large and complex suite of utility libraries that works with almost every C++ compiler in existence. This compatibility has its cost: arcane template tricks and workarounds are necessary to support the oldest and buggiest of compiler specimens. Now that C++11-compatible compilers are widely available, this heavy machinery has become an excessively large and unnecessary dependency. 
 
-# Installing
+## Installing
 
 <div class= "tip">  <div class="tip-header">📓 📝 😎 tip</div> <br>
     Be sure to have gcc, make and cmake installed to be able to follow these steps.
@@ -33,7 +33,7 @@ $ cmake ..
 $ make check -j 4 # compile and run the tests
 ```
 
-# Example : py_fast_int_stack
+## Example : py_fast_int_stack
 
 Ok, now that we've installed all the required modules, let's build a simple project with the library.
 
@@ -111,7 +111,7 @@ PYBIND11_MODULE(module, m) {
 
 I shall not explain the code from line 5 to line 33 as it is pretty obvious for someone who has a basic understanding of c++.
 
-### PYBIND11_MODULE
+## PYBIND11_MODULE
 Now let me explain this seemingly complicated code.
 ```c++
 PYBIND11_MODULE(module, m) {
@@ -149,4 +149,6 @@ $ python
 >>> stack.top()
 12
 ```
+## Benchmarking
+
 
