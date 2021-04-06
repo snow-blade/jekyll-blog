@@ -34,7 +34,7 @@ int main(){
 
 The assertion will fail and it will make the program stop. Line 8 won't compile as the test case is not fulfilled.
 
-![image-20210406150436195](/home/free/.config/Typora/typora-user-images/image-20210406150436195.png)
+![image-20210406150436195](https://raw.githubusercontent.com/snow-blade/blog/master/content/assets/image-20210406150436195.png)
 
 ### Second Case, assertion succeeds
 
@@ -94,7 +94,7 @@ TEST_CASE( "Factorials are computed", "[factorial]" ) {
 
 The third assertion will fail, then we will get the following error message and the program will stop. We will get this beautiful and concise error message :
 
-![image-20210406150926007](/home/free/.config/Typora/typora-user-images/image-20210406150926007.png)
+![image-20210406150926007](https://raw.githubusercontent.com/snow-blade/blog/master/content/assets/image-20210406150926007.png)
 
 ### The assertion succeeds
 
@@ -117,7 +117,7 @@ TEST_CASE( "Factorials are computed", "[factorial]" ) {
 
 All the tests will pass and we will get this beautiful message :
 
-![image-20210406152103420](/home/free/.config/Typora/typora-user-images/image-20210406152103420.png)
+![image-20210406152103420](https://raw.githubusercontent.com/snow-blade/blog/master/content/assets/image-20210406152103420.png)
 
 # Conclusion
 
