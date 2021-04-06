@@ -151,4 +151,220 @@ $ python
 ```
 ## Benchmarking
 
+Here is the code that we will use to run our benchmark.
+
+```python
+from line_profiler import *
+import module
+ 
+@profile
+def normal_stack():
+    stack = []
+    stack.append(80)
+    stack.append(90)
+    stack.append(100)
+    stack.remove(stack[0])
+
+@profile
+def cpp_stack(): 
+    stack = module.Stack()
+    stack.push(80)
+    stack.push(90)
+    stack.push(100)
+    stack.pop()
+spp_stack()
+normal_stack()
+```
+Let's use the line_profiler python plugin(```pip install line_profiler```) to benchmark our 2 functions:
+
+## First Case : test cases < 10 
+```console
+$ kernprof -l -v test-speed.py
+Wrote profile results to test-speed.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 5e-06 s
+File: test-speed.py
+Function: normal_stack at line 4
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     4                                           @profile
+     5                                           def normal_stack():
+     6         1          1.0      1.0     20.0      stack = []
+     7         1          1.0      1.0     20.0      stack.append(80)
+     8         1          1.0      1.0     20.0      stack.append(90)
+     9         1          1.0      1.0     20.0      stack.append(100)
+    10         1          1.0      1.0     20.0      stack.remove(stack[0])
+
+Total time: 2.4e-05 s
+File: test-speed.py
+Function: cpp_stack at line 12
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    12                                           @profile
+    13                                           def cpp_stack(): 
+    14         1         16.0     16.0     66.7      stack = module.Stack()
+    15         1          4.0      4.0     16.7      stack.push(80)
+    16         1          2.0      2.0      8.3      stack.push(90)
+    17         1          1.0      1.0      4.2      stack.push(100)
+    18         1          1.0      1.0      4.2      stack.pop()
+```
+As we can see, the stack we implemented ourselves is slightly faster than the normal stack that we implemented in python.
+
+## Second Case: test cases >= 1000
+
+Let's test our code on a more realistic test case where the number of iterations is equal to 1000.
+```python
+from line_profiler import *
+import module
+ 
+@profile
+def normal_stack():
+    stack = []
+    for i in range(1,1000):
+        stack.append(i)
+    stack.remove(stack[0])
+
+@profile
+def cpp_stack(): 
+    stack = module.Stack()
+    for i in range(1,1000):
+        stack.push(i)
+    stack.pop()
+cpp_stack()
+normal_stack()
+```
+When we compile with ``` kernprof -l -v test-speed.py ```, we get:
+```console
+$ kernprof -l -v test-speedpy       
+
+Wrote profile results to test-speed.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.001273 s
+File: test-speed.py
+Function: normal_stack at line 4
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     4                                           @profile
+     5                                           def normal_stack():
+     6         1          1.0      1.0      0.1      stack = []
+     7      1000        532.0      0.5     41.8      for i in range(1,1000):
+     8       999        737.0      0.7     57.9          stack.append(i)
+     9         1          3.0      3.0      0.2      stack.remove(stack[0])
+
+Total time: 0.00206 s
+File: test-speed.py
+Function: cpp_stack at line 11
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    11                                           @profile
+    12                                           def cpp_stack():
+    13         1         22.0     22.0      1.1      stack = module.Stack()
+    14      1000        617.0      0.6     30.0      for i in range(1,1000):
+    15       999       1419.0      1.4     68.9          stack.push(i)
+    16         1          2.0      2.0      0.1      stack.pop()
+```
+## Wraping Up
+
+Unfortunately, our code is sligtly slower than the normal python stack because of the messy implementation of the stack data structure that I made in C++, I am sure that the code would be way faster if I had used a proper stack instead of the...uh...thing I made instead. <br>
+The time for computation is exponential per iteration as it increases by every iteration because of the implementation I made of the Push method. We can see easily in the benchmark that the stack.pop() method takes up 68% of the computation time.
+
+
+Here is a better implementation of the stack:
+```c++
+class stack
+{
+    int *arr;
+    int top;
+    int capacity;
+ 
+public:
+    stack(int size = SIZE);         // constructor
+    ~stack();                       // destructor
+ 
+    void push(int);
+    int pop();
+    int peek();
+ 
+    int size();
+    bool isEmpty();
+    bool isFull();
+};
+ 
+// Constructor to initialize the stack
+stack::stack(int size)
+{
+    arr = new int[size];
+    capacity = size;
+    top = -1;
+}
+ 
+// Destructor to free memory allocated to the stack
+stack::~stack() {
+    delete[] arr;
+}
+ 
+// Utility function to add an element `x` to the stack
+void stack::push(int x)
+{
+    if (isFull())
+    {
+        cout << "Overflow\nProgram Terminated\n";
+        exit(EXIT_FAILURE);
+    }
+ 
+    cout << "Inserting " << x << endl;
+    arr[++top] = x;
+}
+ 
+// Utility function to pop a top element from the stack
+int stack::pop()
+{
+    // check for stack underflow
+    if (isEmpty())
+    {
+        cout << "Underflow\nProgram Terminated\n";
+        exit(EXIT_FAILURE);
+    }
+ 
+    cout << "Removing " << peek() << endl;
+ 
+    // decrease stack size by 1 and (optionally) return the popped element
+    return arr[top--];
+}
+ 
+// Utility function to return the top element of the stack
+int stack::peek()
+{
+    if (!isEmpty()) {
+        return arr[top];
+    }
+    else {
+        exit(EXIT_FAILURE);
+    }
+}
+ 
+// Utility function to return the size of the stack
+int stack::size() {
+    return top + 1;
+}
+ 
+// Utility function to check if the stack is empty or not
+bool stack::isEmpty() {
+    return top == -1;               // or return size() == 0;
+}
+ 
+// Utility function to check if the stack is full or not
+bool stack::isFull() {
+    return top == capacity - 1;     // or return size() == capacity;
+}
+```
+
+<div class= "tip">   <div class="tip-header">📓 📝 😎 tip</div> <br />  <br />
+ That's it, if you found any typos or anything that could be improved, pleased make a PR to <a href ="https://github.com/snow-blade/jekyll_blog">this github repo </a> by going to the _posts folder and adding your change to the cplusplus-ffi-python.md file</div>
 
