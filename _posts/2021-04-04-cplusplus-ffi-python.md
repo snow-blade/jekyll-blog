@@ -271,7 +271,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 ```
 ## Wraping Up
 
-Unfortunately, our code is sligtly slower than the normal python stack because of the messy implementation of the stack data structure that I made in C++, I am sure that the code would be way faster if I had used a proper stack instead of the...uh...thing I made instead. <br>
+Unfortunately, our code is slightly slower than the normal python stack because of the messy implementation of the stack data structure that I made in C++, I am sure that the code would be way faster if I had used a proper stack instead of the...uh...thing I made instead. <br>
 The time for computation is exponential per iteration as it increases by every iteration because of the implementation I made of the Push method. We can see easily in the benchmark that the stack.pop() method takes up 68% of the computation time.
 
 
