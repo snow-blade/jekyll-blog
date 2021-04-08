@@ -7,7 +7,7 @@ tags: [Python,C_lang, C++,libraries]
 math: true
 mermaid: true
 image:
-  src: https://raw.githubusercontent.com/snow-blade/blog/master/content/assets/lite.png
+  src: https://miro.medium.com/max/3844/1*QL3v3I3i1XJOPAbyoLkaDQ.jpeg
 ---
 
 As a c++ and python developer, have you ever wondered on how you can use both languages in a single project ?
