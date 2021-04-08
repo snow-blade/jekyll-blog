@@ -14,7 +14,7 @@ As a c++ and python developer, have you ever wondered on how you can use both la
 
 Using C and python, it is extremely easy to do so as python even has a built-in module called [cython](https://cython.org). But i kind of struggled to find a decent and easy to use c++ library which can port c++ code to python.
 
-In the past, an excellent library named [Boost.python](http://www.boost.org/doc/libs/1_58_0/libs/python/doc) has been made, but here is the catch: that  Boost is an enormously large and complex suite of utility libraries that works with almost every C++ compiler in existence. This compatibility has its cost: arcane template tricks and workarounds are necessary to support the oldest and buggiest of compiler specimens. Now that C++11-compatible compilers are widely available, this heavy machinery has become an excessively large and unnecessary dependency. 
+In the past, an excellent library named [Boost.python](http://www.boost.org/doc/libs/1_58_0/libs/python/doc) has been made, but here is the catch: Boost is an enormously large and complex suite of utility libraries that works with almost every C++ compiler in existence. This compatibility has its cost: arcane template tricks and workarounds are necessary to support the oldest and buggiest of compiler specimens. Now that C++11-compatible compilers are widely available, this heavy machinery has become an excessively large and unnecessary dependency. 
 
 ## Installing
 
