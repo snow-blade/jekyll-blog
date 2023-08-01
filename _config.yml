@@ -17,7 +17,7 @@ timezone: Asia/Shanghai
 # --------------------------
 title: Blogxt                          # the main title
 
-tagline: A Messed up blog for a possibly deranged teen # it will display as the sub-title
+tagline: Trying to learn, and run with it! # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   On this blog, i will periodly post programming blog posts,
