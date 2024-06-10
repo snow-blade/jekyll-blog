@@ -15,7 +15,7 @@ timezone: America/Los_Angeles
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # --------------------------
-title: Blogxt                          # the main title
+title: Freeman's blog                          # the main title
 
 tagline: I write about AI optimism! # it will display as the sub-title
 
