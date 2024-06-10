@@ -3,4 +3,4 @@ title: About
 icon: fas fa-info
 order: 4
 ---
-If you want to know more about me, check out my portfolio website: [https://snow-blade.github.io/portfolio/](https://snow-blade.github.io/portfolio/). It is a bit outdated but it's kinda cool so...
+I am an AI-optimist, advocating for grounded acceleration. If you find something you think is innacurate or a statement you disagree with, email me at freemanirabaruta@gmail.com
