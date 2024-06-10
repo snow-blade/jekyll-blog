@@ -11,26 +11,25 @@ baseurl: ''
 lang: en-US
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone: America/Los_Angeles
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # --------------------------
 title: Blogxt                          # the main title
 
-tagline: Trying to learn, and run with it! # it will display as the sub-title
+tagline: I write about AI optimism! # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  On this blog, i will periodly post programming blog posts,
-   and will post(or not) some book reviews and some chapters of a book i'm planning to write
+  I used to blog about cool things that I found on the internet. I still do, but I now mostly write about why you should be excited about AGI. 
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: ''
 
 github:
-  username: snow-blade             # change to your github username
+  username: noryve-03             # change to your github username
 
 twitter:
-  username: tweepcoder            # change to your twitter username
+  username: _mutaga            # change to your twitter username
 
 social:
   # Change to your full name.
@@ -39,8 +38,8 @@ social:
   email: freemanirabaruta@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/tweepcoder      # change to your twitter homepage
-    - https://github.com/tweepcoder       # change to your github homepage
+    - https://twitter.com/_mutaga      # change to your twitter homepage
+    - https://github.com/noryve-03       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
